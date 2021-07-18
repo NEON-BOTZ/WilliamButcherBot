@@ -1,26 +1,3 @@
-"""
-MIT License
-
-Copyright (c) 2021 TheHamkerCat
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-"""
 import asyncio
 import importlib
 import re
@@ -109,21 +86,12 @@ async def help_command(_, message):
             [
                 [
                     InlineKeyboardButton(
-                        text="Help ❓",
-                        url=f"t.me/{BOT_USERNAME}?start=help",
+                        text="Channel",
+                        url=f"t.me/TheElegantX",
                     ),
                     InlineKeyboardButton(
-                        text="Repo 🛠",
-                        url="https://github.com/thehamkercat/WilliamButcherBot",
-                    ),
-                ],
-                [
-                    InlineKeyboardButton(
-                        text="System Stats 💻",
-                        callback_data="stats_callback",
-                    ),
-                    InlineKeyboardButton(
-                        text="Support 👨", url="t.me/WBBSupport"
+                        text="Support",
+                        url="t.me/TheElegantChat",
                     ),
                 ],
             ]
@@ -134,34 +102,20 @@ async def help_command(_, message):
         return
     keyboard = InlineKeyboardMarkup(
         [
-            [
-                InlineKeyboardButton(
-                    text="Commands ❓", callback_data="bot_commands"
-                ),
-                InlineKeyboardButton(
-                    text="Repo 🛠",
-                    url="https://github.com/thehamkercat/WilliamButcherBot",
-                ),
-            ],
-            [
-                InlineKeyboardButton(
-                    text="System Stats 🖥",
-                    callback_data="stats_callback",
-                ),
-                InlineKeyboardButton(
-                    text="Support 👨", url="t.me/WBBSupport"
-                ),
-            ],
-            [
-                InlineKeyboardButton(
-                    text="Add Me To Your Group 🎉",
-                    url=f"http://t.me/{BOT_USERNAME}?startgroup=new",
-                )
-            ],
-        ]
-    )
+                [
+                    InlineKeyboardButton(
+                        text="Channel",
+                        url=f"t.me/TheElegantX",
+                    ),
+                    InlineKeyboardButton(
+                        text="Support",
+                        url="t.me/TheElegantChat",
+                    ),
+                ],
+            ]
+        )
     await message.reply(
-        f"Hey there! My name is {BOT_NAME}. I can manage your group with lots of useful features, feel free to add me to your group.",
+        f"*Hey there! My name is {BOT_NAME}.* I can manage The Elegant X group with lots of useful features, I Can't Join On Your Groups.",
         reply_markup=keyboard,
     )
 
